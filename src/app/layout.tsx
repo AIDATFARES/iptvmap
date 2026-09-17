@@ -51,8 +51,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`dark scroll-smooth ${inter.variable}`}>
-      <head>
-      </head>
       <body suppressHydrationWarning className="bg-background text-on-background font-body-lg min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
         {/* Navbar Component */}
         <Navbar />
@@ -65,7 +63,7 @@ export default function RootLayout({
             <div className="col-span-2 sm:col-span-4 xl:col-span-1 min-w-0 max-w-[310px] space-y-4">
               <Link href="/"><BrandLogo /></Link>
               <p className="max-w-[285px] whitespace-normal break-normal text-sm leading-6 text-stone-300">
-                © 2024 IPTVMap. Premium 4K IPTV Streaming & Global Routing Services. All rights reserved.
+                © 2026 IPTVMap. Premium 4K IPTV Streaming & Global Routing Services. All rights reserved.
               </p>
               <a href="https://wa.me/213552069874" target="_blank" rel="noreferrer" className="flex max-w-[270px] items-center gap-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/[0.08] p-3.5 transition-colors hover:border-[#00E5FF]/50 group">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 transition-transform group-hover:scale-105">
@@ -109,9 +107,9 @@ export default function RootLayout({
               <ul className="space-y-3 text-sm">
                 <li><Link prefetch={false} className="text-stone-400 transition-colors hover:text-white" href="/privacy-policy">Privacy Policy</Link></li>
                 <li><Link prefetch={false} className="text-stone-400 transition-colors hover:text-white" href="/refund-policy">Refund Policy</Link></li>
-                <li><Link prefetch={false} className="text-stone-400 transition-colors hover:text-white" href="#">Disclaimer</Link></li>
+                <li><Link prefetch={false} className="text-stone-400 transition-colors hover:text-white" href="/dmca">Disclaimer</Link></li>
                 <li><Link prefetch={false} className="text-stone-400 transition-colors hover:text-white" href="/dmca">DMCA</Link></li>
-                <li><Link prefetch={false} className="text-stone-400 transition-colors hover:text-white" href="#">Cookie Policy</Link></li>
+                <li><Link prefetch={false} className="text-stone-400 transition-colors hover:text-white" href="/privacy-policy">Cookie Policy</Link></li>
               </ul>
             </div>
 
@@ -129,9 +127,9 @@ export default function RootLayout({
               <div className="flex flex-wrap gap-3">
                 <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-white/5 hover:text-white" href="/privacy-policy">Privacy Policy</Link>
                 <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-white/5 hover:text-white" href="/refund-policy">Refund Policy</Link>
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-white/5 hover:text-white" href="#">Disclaimer</Link>
+                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-white/5 hover:text-white" href="/dmca">Disclaimer</Link>
                 <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-white/5 hover:text-white" href="/dmca">DMCA</Link>
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-white/5 hover:text-white" href="#">Cookie Policy</Link>
+                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-white/5 hover:text-white" href="/privacy-policy">Cookie Policy</Link>
               </div>
             </div>
           </div>
