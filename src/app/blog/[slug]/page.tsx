@@ -19,17 +19,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find((p) => p.slug === resolvedParams.slug);
 
   if (!post) {
-    return { title: 'Post Not Found | Flash4K' };
+    return { title: 'IPTVMap – Post Not Found' };
   }
 
   return {
-    title: `${post.title} | Flash4K`,
+    title: `IPTVMap – ${post.title}`,
     description: post.description,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
     openGraph: {
-      title: `${post.title} | Flash4K`,
+      title: `IPTVMap – ${post.title}`,
       description: post.description,
       url: `/blog/${post.slug}`,
       ...(post.coverImage && {
@@ -112,7 +112,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ol: ({ node, ...props }: any) => <ol className="list-decimal pl-6 mb-6 space-y-2" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    a: ({ node, ...props }: any) => <a className="text-[#FFB800] hover:text-[#FFE600] no-underline font-semibold transition-colors" {...props} />,
+    a: ({ node, ...props }: any) => <a className="text-[#00E5FF] hover:text-[#00E5FF] no-underline font-semibold transition-colors" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     blockquote: ({ node, ...props }: any) => <blockquote className="border-l-4 border-primary pl-4 py-1 mb-6 italic bg-surface-container/30 rounded-r" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -228,7 +228,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                       <img
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt={relPost.title}
-                        src={relPost.coverImage || "/blog/high-quality-iptv-service.webp"}
+                        src={relPost.coverImage || "/blog/best-iptv-players-smart-tv.webp"}
                       />
                     </div>
                     <div className="p-5 flex flex-col flex-grow bg-surface-container-lowest/50">

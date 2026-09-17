@@ -1,7 +1,7 @@
 import PricingPageContent from "@/components/pricing/PricingPageContent";
 
 export const metadata = {
-  title: "IPTV Subscription Plans & Pricing – Get Instant Access | Flash4K",
+  title: "IPTVMap – IPTV Subscription Plans & Pricing | Get Instant Access",
   description: "Choose the perfect premium IPTV subscription plan. Enjoy flexible pricing, 4K streaming, anti-freeze tech and full VOD library. Discover our options and get started!",
   alternates: {
     canonical: "/pricing",

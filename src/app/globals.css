@@ -1,38 +1,38 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #050607;
+  --color-background: #070a0f;
   --color-on-background: #f8f9fa;
   
-  --color-surface: #08090b;
-  --color-surface-dim: #050607;
-  --color-surface-bright: #0d0f12;
+  --color-surface: #0b0f17;
+  --color-surface-dim: #070a0f;
+  --color-surface-bright: #121824;
   
-  --color-surface-container-lowest: #050607;
-  --color-surface-container-low: #08090b;
-  --color-surface-container: #0d0f12;
-  --color-surface-container-high: #111317;
-  --color-surface-container-highest: #15171b;
+  --color-surface-container-lowest: #070a0f;
+  --color-surface-container-low: #0b0f17;
+  --color-surface-container: #121824;
+  --color-surface-container-high: #182030;
+  --color-surface-container-highest: #1f293d;
   --color-on-surface: #f8f9fa;
-  --color-on-surface-variant: #a0a5b0;
+  --color-on-surface-variant: #94a3b8;
   
-  --color-primary: #FFB800;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #FFE600;
-  --color-on-primary-container: #ffffff;
+  --color-primary: #00E5FF;
+  --color-on-primary: #070a0f;
+  --color-primary-container: #0088FF;
+  --color-on-primary-container: #070a0f;
   
-  --color-secondary: #FF7A00;
-  --color-on-secondary: #ffffff;
-  --color-secondary-container: #FFA500;
-  --color-on-secondary-container: #ffffff;
+  --color-secondary: #0088FF;
+  --color-on-secondary: #070a0f;
+  --color-secondary-container: #38bdf8;
+  --color-on-secondary-container: #070a0f;
   
-  --color-outline: #333842;
-  --color-outline-variant: #1a1c21;
+  --color-outline: #1e293b;
+  --color-outline-variant: #0f172a;
 
-  --color-error: #FFA500;
+  --color-error: #f43f5e;
   --color-on-error: #ffffff;
-  --color-error-container: #5c0d17;
-  --color-on-error-container: #ffb3bc;
+  --color-error-container: #881337;
+  --color-on-error-container: #fecdd3;
   
   --radius: 0.25rem;
   --radius-lg: 0.5rem;
@@ -97,41 +97,41 @@
 }
 
 @layer components {
-  /* Glass panel replacement: Dark cards with subtle border */
+  /* Glass panel replacement: Cyber obsidian cards with subtle cyan border */
   .glass-panel {
-    background: rgba(17, 19, 23, 0.85);
+    background: rgba(11, 15, 23, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 184, 0, 0.12);
+    border: 1px solid rgba(0, 229, 255, 0.15);
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
   }
   .glass-panel:hover {
     transform: translateY(-2px);
-    border-color: rgba(255, 184, 0, 0.3);
-    box-shadow: 0 8px 32px rgba(255, 184, 0, 0.15);
+    border-color: rgba(0, 229, 255, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 229, 255, 0.15);
   }
 
   .text-glow {
-    text-shadow: 0 0 20px rgba(255, 184, 0, 0.4);
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.45);
   }
   .btn-glow:hover {
-    box-shadow: 0 8px 30px rgba(255, 80, 50, 0.25);
+    box-shadow: 0 8px 30px rgba(0, 229, 255, 0.3);
   }
 
   /* Primary CTA Buttons */
   .btn-primary-voltra {
-    background: linear-gradient(135deg, #FFB800 0%, #FF7A00 100%);
-    color: #ffffff;
-    font-weight: 700;
+    background: linear-gradient(135deg, #00E5FF 0%, #0088FF 100%);
+    color: #070a0f;
+    font-weight: 800;
     letter-spacing: 0.04em;
     border-radius: 9999px; /* pill shape */
-    box-shadow: 0 8px 30px rgba(255, 80, 50, 0.25);
+    box-shadow: 0 8px 30px rgba(0, 229, 255, 0.3);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-primary-voltra:hover {
-    box-shadow: 0 10px 35px rgba(255, 80, 50, 0.4);
+    box-shadow: 0 10px 35px rgba(0, 229, 255, 0.45);
     transform: scale(1.02);
   }
   .btn-primary-voltra:active {
@@ -141,27 +141,27 @@
   /* Secondary Buttons */
   .btn-secondary-voltra {
     background: transparent;
-    border: 1px solid #FFB800;
+    border: 1px solid #00E5FF;
     color: #ffffff;
     font-weight: 600;
     border-radius: 9999px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-secondary-voltra:hover {
-    background: rgba(255, 184, 0, 0.1);
+    background: rgba(0, 229, 255, 0.12);
     transform: translateY(-2px);
   }
 
   /* Text Gradients */
   .text-gradient-primary {
-    background: linear-gradient(90deg, #FFB800, #FF7A00);
+    background: linear-gradient(90deg, #00E5FF, #0088FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .text-gradient-secondary {
-    background: linear-gradient(90deg, #FFE600, #FFA500);
+    background: linear-gradient(90deg, #0088FF, #38bdf8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -190,10 +190,10 @@
   }
   .text-format-marketing mark,
   .text-format-marketing .text-highlight {
-    @apply bg-transparent text-[#FFB800] font-extrabold;
+    @apply bg-transparent text-[#00E5FF] font-extrabold;
   }
   .text-format-marketing .badge-text {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-[#FFB800]/30 bg-[#FFB800]/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFE600];
+    @apply inline-flex items-center gap-1.5 rounded-full border border-[#00E5FF]/30 bg-[#00E5FF]/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#00E5FF];
   }
 
   /* 2. BLOG & EDITORIAL PAGES (Blog listing, Article detail) */
@@ -218,7 +218,7 @@
     @apply italic text-stone-200;
   }
   .text-format-blog a {
-    @apply text-[#FFB800] font-medium underline underline-offset-4 decoration-[#FFB800]/40 hover:text-[#FFE600] hover:decoration-[#FFB800] transition-colors;
+    @apply text-[#00E5FF] font-medium underline underline-offset-4 decoration-[#00E5FF]/40 hover:text-[#0088FF] hover:decoration-[#00E5FF] transition-colors;
   }
 
   /* 3. TECHNICAL GUIDES & INSTALLATION PAGES */
@@ -236,11 +236,11 @@
   }
   .text-format-technical code,
   .text-format-technical pre {
-    @apply font-mono text-[#FFB800] bg-[#111317] px-2.5 py-1 rounded-md border border-white/10 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
+    @apply font-mono text-[#00E5FF] bg-[#0b0f17] px-2.5 py-1 rounded-md border border-white/10 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
   }
   .text-format-technical strong,
   .text-format-technical b {
-    @apply font-bold text-white underline decoration-[#FF7A00]/50 decoration-2 underline-offset-2;
+    @apply font-bold text-white underline decoration-[#0088FF]/50 decoration-2 underline-offset-2;
   }
 
   /* 4. LEGAL & POLICY DOCUMENTS */
@@ -248,7 +248,7 @@
     @apply font-black uppercase tracking-tight text-white text-3xl sm:text-4xl lg:text-5xl;
   }
   .text-format-legal h2 {
-    @apply font-bold text-white text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-[#FFB800] pl-3;
+    @apply font-bold text-white text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-[#00E5FF] pl-3;
   }
   .text-format-legal p {
     @apply text-stone-300 leading-7 font-normal text-sm sm:text-base mb-4 tracking-normal;
@@ -258,7 +258,7 @@
     @apply font-semibold text-white;
   }
   .text-format-legal a {
-    @apply font-semibold text-[#FFB800] hover:text-[#FFE600] transition-colors underline underline-offset-2;
+    @apply font-semibold text-[#00E5FF] hover:text-[#0088FF] transition-colors underline underline-offset-2;
   }
 }
 

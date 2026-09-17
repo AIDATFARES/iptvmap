@@ -16,8 +16,80 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/blog/best-iptv-players-for-smart-tv-2026",
+        destination: "/blog/best-iptv-players-smart-tv",
+        permanent: true,
+      },
+      {
+        source: "/blog/what-internet-speed-do-you-need-for-iptv",
+        destination: "/blog/internet-speed-for-iptv",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-audio-video-out-of-sync",
+        destination: "/blog/iptv-audio-video-sync-fix",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-channel-switching-slow",
+        destination: "/blog/fast-iptv-channel-switching-fix",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-watch-nfl-games-live-2026",
+        destination: "/blog/watch-nfl-games-live-iptv",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-watch-nba-games-live-2026",
+        destination: "/blog/watch-nba-games-live-iptv",
+        permanent: true,
+      },
+      {
+        source: "/blog/watch-nfl-nba-mlb-nhl-with-iptv-2026",
+        destination: "/blog/stream-nfl-nba-mlb-nhl-iptv",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-does-iptv-work",
+        destination: "/blog/how-iptv-works-guide",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-vs-streaming-services-2026",
+        destination: "/blog/iptv-vs-streaming-services",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-keeps-freezing-causes-fixes",
+        destination: "/blog/fix-iptv-freezing-troubleshooting",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-buffering-after-a-few-minutes",
+        destination: "/blog/iptv-buffering-after-few-minutes-fix",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-works-on-one-device-but-not-another",
+        destination: "/blog/iptv-works-on-one-device-fix",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-set-up-iptv-on-smart-tv-2026",
+        destination: "/blog/how-to-setup-iptv-smart-tv",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-vs-cable-tv-2026",
+        destination: "/blog/iptv-vs-cable-tv",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
-// Force Vercel deployment update for www.dooriptv.shop canonical domain alignment
-
