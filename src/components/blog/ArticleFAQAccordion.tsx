@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export interface FAQItem {
   question: string;
@@ -45,20 +44,17 @@ export default function ArticleFAQAccordion({ faqs }: { faqs: FAQItem[] }) {
               />
             </button>
 
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  <div className="px-6 py-5 text-stone-300 text-sm sm:text-base leading-relaxed bg-[#0f1419]/60 border-t border-white/5">
-                    {faq.answer}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <div
+              className={`grid transition-all duration-300 ease-in-out ${
+                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className="px-6 py-5 text-stone-300 text-sm sm:text-base leading-relaxed bg-[#0f1419]/60 border-t border-white/5">
+                  {faq.answer}
+                </div>
+              </div>
+            </div>
           </div>
         );
       })}

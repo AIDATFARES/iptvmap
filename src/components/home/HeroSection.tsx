@@ -9,9 +9,10 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-iptvmap-bg.jpg"
+          src="/hero-iptvmap-bg.webp"
           alt="IPTVMap Background"
           priority
+          fetchPriority="high"
           fill
           sizes="100vw"
           className="object-cover opacity-65"

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { ArrowRight, HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
@@ -220,20 +219,17 @@ export default function FAQSection() {
                   />
                 </button>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                    >
-                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-stone-300 leading-relaxed bg-transparent border-t border-white/5 pt-4 mt-1">
-                        <p>{faq.answer}</p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-stone-300 leading-relaxed bg-transparent border-t border-white/5 pt-4 mt-1">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             );
           })}

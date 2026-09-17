@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { 
   Baby, 
@@ -13,7 +11,6 @@ import {
   CirclePlay,
   Radio
 } from "lucide-react";
-import { motion } from "framer-motion";
 import BrandMarquee from "@/components/home/BrandMarquee";
 
 // Category Overview Cards
@@ -63,31 +60,31 @@ const categoryCards = [
     icon: Monitor,
     title: "Entertainment",
     items: [
-      "Reality TV, variety, music, lifestyle & drama",
-      "Popular everyday cable and satellite networks",
-      "US, UK, Canadian & European top entertainment"
+      "Drama, reality TV, comedies, documentaries",
+      "Premium network television worldwide",
+      "Discovery, Nat Geo, TLC, History & Bravo"
     ],
-    count: "15,000+ Channels"
+    count: "6,400+ Channels"
   },
   {
     icon: Globe2,
     title: "International",
     items: [
-      "150+ country packages & regional channels",
-      "Local sports, news, culture & native audio",
-      "Europe, Americas, MENA, Asia & Africa"
+      "USA, UK, Canada, France, Italy, Spain, Turkey",
+      "Arabic, German, Latino, African & Asian streams",
+      "Native regional commentary & audio tracks"
     ],
-    count: "+50,000 Channels"
+    count: "20,000+ Channels"
   },
   {
     icon: Layers3,
     title: "Series & Shows",
     items: [
-      "Latest released seasons with daily updates",
-      "Complete boxsets, timeless classics & VOD",
-      "Netflix, Amazon, Apple TV+, HBO Max & Disney+"
+      "Complete seasons with multiple language audio",
+      "Multi-subtitles included (EN, FR, AR, ES)",
+      "Updated daily with newly released episodes"
     ],
-    count: "+120,000 Films & Series"
+    count: "120,000+ Episodes"
   }
 ];
 
@@ -102,48 +99,36 @@ export default function ChannelsPage() {
         
         {/* Header Banner */}
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
             className="inline-flex rounded-full border border-[#00E5FF]/35 bg-[#00E5FF]/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#0088FF] mb-6"
           >
             <Radio className="w-3.5 h-3.5 mr-2 text-[#00E5FF] animate-pulse inline" />
             <span>+50,000 CHANNELS · +120,000 FILMS &amp; SERIES · 200,000+ VODS</span>
-          </motion.div>
+          </div>
 
-          <motion.h1 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <h1 
             className="mt-2 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight"
           >
             <span className="block text-white">Popular IPTVMap</span>
             <span className="mt-1 block text-[#00E5FF]">Live Channels &amp; VOD.</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <p 
             className="mx-auto mt-5 max-w-2xl text-base sm:text-lg text-stone-300 leading-relaxed"
           >
             Browse our full channel lineup featuring live sports, movies, news, entertainment, and on-demand series in 4K &amp; HD quality from over 150+ countries.
-          </motion.p>
+          </p>
         </div>
 
         {/* SECTION 1: Category Cards Grid */}
         <section className="mb-20">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {categoryCards.map((category, index) => {
+            {categoryCards.map((category) => {
               const Icon = category.icon;
 
               return (
-                <motion.article
+                <article
                   key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: index * 0.05 }}
                   className="relative min-h-[240px] rounded-xl border border-white/10 border-t-2 border-t-cyan-400 bg-[#070A0F] px-6 pb-6 pt-14 shadow-[0_12px_32px_rgba(0,0,0,0.3)] hover:border-[#00E5FF]/60 hover:shadow-[0_0_25px_rgba(6,182,212,0.2)] transition-all duration-300 group"
                 >
                   {/* Top Floating Badge Icon */}
@@ -175,7 +160,7 @@ export default function ChannelsPage() {
                     <span className="text-[10px] font-bold uppercase tracking-wider text-stone-400">Total Available</span>
                     <span className="text-xs font-black text-[#0088FF]">{category.count}</span>
                   </div>
-                </motion.article>
+                </article>
               );
             })}
           </div>
